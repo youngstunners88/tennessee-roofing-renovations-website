@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennessee Roofing & Renovations | Professional Services Knoxville, TN</title>
+    <meta name="description" content="Tennessee Roofing & Renovations - Professional Services in Knoxville, TN. Professional workmanship and competitive pricing. Call (865) 352-4312 for a free estimate.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50; --accent: #e74c3c; --accent-light: #ec7063; --light-bg: #ecf0f1;
+            --success: #27ae60; --text: #2c3e50; --text-light: #7f8c8d; --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; overflow-x: hidden; }
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(44,62,80,0.97); backdrop-filter: blur(10px); border-bottom: 4px solid var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
+        .logo-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent), var(--accent-light)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--white); font-weight: 800; }
+        .logo-text { font-family: 'Lora', serif; font-size: 1.6rem; font-weight: 700; color: var(--white); letter-spacing: 0.02em; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: #bdc3c7; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent); }
+        .btn { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.7rem 1.8rem; border-radius: 5px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.25s; }
+        .btn-primary { background: var(--accent); color: var(--white); }
+        .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(231, 76, 60, 0.35); }
+        .hero { min-height: 100vh; background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%); color: var(--white); display: flex; flex-direction: column; justify-content: center; padding: 8rem 2rem 5rem; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(231,76,60,0.03) 0px, rgba(231,76,60,0.03) 2px, transparent 2px, transparent 40px); }
+        .hero-content { max-width: 1200px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+        .hero h1 { font-family: 'Lora', serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.2rem; }
+        .hero h1 .accent { color: var(--accent); }
+        .hero-sub { font-size: clamp(1rem, 2vw, 1.25rem); color: #bdc3c7; max-width: 600px; margin-bottom: 2.5rem; line-height: 1.7; font-weight: 300; }
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-trust { display: flex; align-items: center; gap: 2rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+        .trust-item { display: flex; align-items: center; gap: 0.7rem; font-size: 0.95rem; color: #bdc3c7; }
+        .trust-item i { color: var(--accent); font-size: 1.2rem; }
+        .stats-bar { background: var(--accent); }
+        .stats-inner { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; }
+        .stat { text-align: center; }
+        .stat-num { font-family: 'Lora', serif; font-size: 3rem; font-weight: 700; color: var(--white); line-height: 1; }
+        .stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; font-weight: 600; }
+        .services-section { background: var(--light-bg); padding: 6rem 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-header { margin-bottom: 4rem; text-align: center; }
+        .overline { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 0.7rem; }
+        .section-header h2 { font-family: 'Lora', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; color: var(--primary); margin-bottom: 0.8rem; line-height: 1.1; }
+        .section-header p { color: var(--text-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .service-card { background: var(--white); border-radius: 8px; padding: 2.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; border-top: 4px solid var(--accent); }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 12px 35px rgba(231,76,60,0.15); }
+        .svc-icon { width: 60px; height: 60px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent-light)); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--white); margin-bottom: 1.5rem; }
+        .service-card h3 { font-family: 'Lora', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.7rem; color: var(--primary); }
+        .service-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+        .about-section { padding: 6rem 2rem; background: var(--white); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .about-image { background: linear-gradient(135deg, var(--primary), #34495e); border-radius: 12px; min-height: 500px; display: flex; align-items: center; justify-content: center; font-size: 6rem; color: rgba(255,255,255,0.1); position: relative; overflow: hidden; }
+        .about-badge { position: absolute; bottom: -15px; right: -15px; background: var(--accent); color: var(--white); border-radius: 10px; padding: 1.2rem 1.5rem; text-align: center; font-weight: 700; box-shadow: 0 8px 25px rgba(231,76,60,0.4); }
+        .about-badge-num { font-family: 'Lora', serif; font-size: 2.8rem; display: block; line-height: 1; }
+        .about-badge-text { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.9; }
+        .about-content h2 { font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem; line-height: 1.1; }
+        .about-content > p { color: var(--text-light); font-size: 1.05rem; margin-bottom: 1.8rem; }
+        .features-list { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 2.5rem; }
+        .feature-item { display: flex; gap: 1rem; padding: 1.2rem; background: var(--light-bg); border-radius: 8px; border-left: 4px solid var(--accent); }
+        .feat-icon { width: 40px; height: 40px; border-radius: 8px; background: var(--accent); color: var(--white); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
+        .feature-item h4 { font-weight: 700; color: var(--primary); margin-bottom: 0.3rem; font-size: 0.95rem; }
+        .feature-item p { color: var(--text-light); font-size: 0.85rem; }
+        .process-section { background: var(--primary); padding: 6rem 2rem; color: var(--white); }
+        .process-section .section-header h2 { color: var(--white); }
+        .process-section .section-header p { color: #bdc3c7; }
+        .process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        .process-step { padding: 2rem; background: rgba(255,255,255,0.08); border-radius: 8px; border: 1px solid rgba(231,76,60,0.2); }
+        .step-num { font-family: 'Lora', serif; font-size: 4rem; font-weight: 700; color: rgba(231,76,60,0.15); line-height: 0.8; margin-bottom: 0.5rem; }
+        .step-ico { font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; }
+        .process-step h3 { font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.7rem; color: var(--white); }
+        .process-step p { color: #bdc3c7; font-size: 0.95rem; line-height: 1.6; }
+        .reviews-section { background: var(--light-bg); padding: 6rem 2rem; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .review-card { background: var(--white); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 4px solid var(--accent); }
+        .review-stars { color: #f39c12; font-size: 1rem; margin-bottom: 1rem; letter-spacing: 0.2em; }
+        .review-text { color: var(--text-light); font-style: italic; margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.7; }
+        .reviewer { font-weight: 700; color: var(--primary); font-size: 0.95rem; }
+        .verified { font-size: 0.75rem; color: var(--accent); font-weight: 600; }
+        .cta-section { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%); padding: 7rem 2rem; text-align: center; color: var(--white); position: relative; overflow: hidden; }
+        .cta-section h2 { font-family: 'Lora', serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.1; }
+        .cta-section > p { font-size: 1.1rem; color: rgba(255,255,255,0.9); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .btn-white { background: var(--white); color: var(--accent); font-weight: 800; }
+        .btn-white:hover { background: #ecf0f1; transform: translateY(-3px); }
+        .cta-info { margin-top: 2rem; font-size: 0.95rem; color: rgba(255,255,255,0.8); }
+        footer { background: var(--primary); color: var(--text-light); padding: 4rem 2rem 2rem; border-top: 4px solid var(--accent); }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3rem; margin-bottom: 2rem; }
+        .footer-contact p { margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.8rem; }
+        .footer-contact i { color: var(--accent); width: 18px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; text-align: center; font-size: 0.85rem; }
+        .demo-strip { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(44,62,80,0.95); border-top: 3px solid var(--accent); color: var(--white); text-align: center; padding: 0.7rem; font-size: 0.85rem; z-index: 9999; }
+        .demo-strip strong { color: var(--accent); }
+        @media (max-width: 768px) { .about-grid, .process-steps, .nav-links { grid-template-columns: 1fr; display: block; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="logo">
+            <div class="logo-icon">⭐</div>
+            <span class="logo-text">Tennessee Roofing & Renovations</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact" class="btn btn-primary">Free Estimate</a></li>
+        </ul>
+    </div>
+</nav>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Tennessee Roofing & Renovations</h1>
+        <p class="hero-sub">Professional Services in Knoxville, TN. Quality craftsmanship, attention to detail, and stunning results every time.</p>
+        <div class="hero-actions">
+            <a href="tel:+8653524312" class="btn btn-primary"><i class="fas fa-phone"></i> Call (865) 352-4312</a>
+            <a href="#services" class="btn btn-primary" style="background: transparent; border: 2px solid var(--white); color: var(--white);"><i class="fas fa-briefcase"></i> Our Services</a>
+        </div>
+        <div class="hero-trust">
+            <div class="trust-item"><i class="fas fa-check"></i> 10+ Years Experience</div>
+            <div class="trust-item"><i class="fas fa-check"></i> Licensed & Insured</div>
+            <div class="trust-item"><i class="fas fa-check"></i> Free Estimates</div>
+            <div class="trust-item"><i class="fas fa-check"></i>100% Satisfaction</div>
+        </div>
+    </div>
+</section>
+<div class="stats-bar">
+    <div class="stats-inner">
+        <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Years in Business</div></div>
+        <div class="stat"><div class="stat-num">1000+</div><div class="stat-label">Projects Completed</div></div>
+        <div class="stat"><div class="stat-num">5.0 ⭐</div><div class="stat-label">Customer Rating</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Satisfaction Guarantee</div></div>
+    </div>
+</div>
+<section id="services" class="services-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="overline">What We Do</div>
+            <h2>Professional roofer Services</h2>
+            <p>Expert roofer services tailored to your needs. We deliver quality workmanship with every project.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card"><div class="svc-icon"><i class="fas fa-wrench"></i></div><h3>Service 1</h3><p>Professional service 1 tailored to your needs. Expert workmanship and attention to detail in every project.</p></div>
+            <div class="service-card"><div class="svc-icon"><i class="fas fa-tools"></i></div><h3>Service 2</h3><p>Professional service 2 tailored to your needs. Expert workmanship and attention to detail in every project.</p></div>
+            <div class="service-card"><div class="svc-icon"><i class="fas fa-star"></i></div><h3>Service 3</h3><p>Professional service 3 tailored to your needs. Expert workmanship and attention to detail in every project.</p></div>
+            <div class="service-card"><div class="svc-icon"><i class="fas fa-shield-alt"></i></div><h3>Service 4</h3><p>Professional service 4 tailored to your needs. Expert workmanship and attention to detail in every project.</p></div>
+            <div class="service-card"><div class="svc-icon"><i class="fas fa-check"></i></div><h3>Service 5</h3><p>Professional service 5 tailored to your needs. Expert workmanship and attention to detail in every project.</p></div>
+            <div class="service-card"><div class="svc-icon"><i class="fas fa-cogs"></i></div><h3>Service 6</h3><p>Professional service 6 tailored to your needs. Expert workmanship and attention to detail in every project.</p></div>
+        </div>
+    </div>
+</section>
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+                <i class="fas fa-hammer"></i>
+                <div class="about-badge"><span class="about-badge-num">10+</span><span class="about-badge-text">Years</span></div>
+            </div>
+            <div class="about-content">
+                <div class="overline">About Tennessee Roofing & Renovations</div>
+                <h2>Excellence in Service</h2>
+                <p>Tennessee Roofing & Renovations has been serving Knoxville families for over 10+. We're committed to delivering top-quality roofer work with meticulous attention to detail and exceptional customer service. Every project is treated like it's our own home.</p>
+                <div class="features-list">
+                    <div class="feature-item"><div class="feat-icon"><i class="fas fa-star"></i></div><div><h4>Expert Craftsmanship</h4><p>Trained, experienced professionals who take pride in every detail.</p></div></div>
+                    <div class="feature-item"><div class="feat-icon"><i class="fas fa-shield-alt"></i></div><div><h4>Licensed & Insured</h4><p>Fully licensed with comprehensive insurance coverage.</p></div></div>
+                    <div class="feature-item"><div class="feat-icon"><i class="fas fa-clock"></i></div><div><h4>Reliable & Punctual</h4><p>We show up on time, finish on schedule, and communicate clearly.</p></div></div>
+                    <div class="feature-item"><div class="feat-icon"><i class="fas fa-handshake"></i></div><div><h4>Customer First</h4><p>Your satisfaction is our priority. We listen and deliver exactly what you envision.</p></div></div>
+                </div>
+                <a href="tel:+8653524312" class="btn btn-primary"><i class="fas fa-phone"></i> Get Your Free Estimate</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="process" class="process-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="overline">How It Works</div>
+            <h2>Our Simple 3-Step Process</h2>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-num">01</div>
+                <div class="step-ico"><i class="fas fa-phone"></i></div>
+                <h3>Free Consultation</h3>
+                <p>Call us for a free estimate. We discuss your project, timeline, and budget with no pressure.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">02</div>
+                <div class="step-ico"><i class="fas fa-hammer"></i></div>
+                <h3>Professional Work</h3>
+                <p>We handle every detail carefully, applying quality materials and expert technique throughout.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">03</div>
+                <div class="step-ico"><i class="fas fa-thumbs-up"></i></div>
+                <h3>Final Walkthrough</h3>
+                <p>We walk through with you to ensure everything meets your expectations. Your satisfaction guaranteed.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="reviews" class="reviews-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="overline">What Customers Say</div>
+            <h2>Real Reviews From Knoxville Customers</h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Professional, reliable, and honest. They showed up when they said, finished on time, and the work is flawless. Highly recommended!"</p><div><span class="reviewer">— Customer Review</span><span class="verified">Verified</span></div></div>
+            <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Excellent service and attention to detail. They treated my property with care and pride. Will definitely use again!"</p><div><span class="reviewer">— Customer Review</span><span class="verified">Verified</span></div></div>
+            <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Outstanding work! Fair pricing, great communication, and fantastic results. This is the team to call."</p><div><span class="reviewer">— Customer Review</span><span class="verified">Verified</span></div></div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="cta-section">
+    <h2>Ready to Get Started?</h2>
+    <p>Contact Tennessee Roofing & Renovations today for a free estimate. Professional services in Knoxville, TN.</p>
+    <a href="tel:+8653524312" class="btn btn-white"><i class="fas fa-phone"></i> Call (865) 352-4312</a>
+    <p class="cta-info"><i class="fas fa-map-marker-alt"></i> Knoxville, TN | <i class="fas fa-briefcase"></i> roofer</p>
+</section>
+<footer>
+    <div class="footer-inner">
+        <div>
+            <a href="#" class="logo" style="color: var(--white);"><div class="logo-icon">⭐</div><span class="logo-text">Tennessee Roofing & Renovations</span></a>
+            <p style="margin-top: 0.8rem;">Professional roofer services in Knoxville, TN.</p>
+        </div>
+        <div class="footer-contact">
+            <p><i class="fas fa-phone"></i> (865) 352-4312</p>
+            <p><i class="fas fa-map-marker-alt"></i> Knoxville, TN</p>
+            <p><i class="fas fa-clock"></i> Monday - Friday, 7AM - 5PM</p>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Tennessee Roofing & Renovations. All Rights Reserved. Professional roofer Services in Knoxville, TN.</p></div>
+</footer>
+<div class="demo-strip">⭐ <strong>DEMO SITE</strong> - This professional website was built for <strong>Tennessee Roofing & Renovations</strong> in Knoxville, TN. Claim it today!</div>
+</body>
+</html>
